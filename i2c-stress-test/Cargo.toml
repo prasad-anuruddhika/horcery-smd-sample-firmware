@@ -1,0 +1,20 @@
+[package]
+name = "i2c-stress-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+linux-embedded-hal = "0.3"
+bme680 = "0.6.0"
+ina219-sensor = {git = "ssh://git@bitbucket.org/atlas-labs/84-horcery-smd-ina219-sensor.git", version = "0.1.1"}
+lm75 = {git = "ssh://git@bitbucket.org/atlas-labs/lm75-temperature-sensor-rust.git", branch = "feature/read-config"}
+tokio = { version = "1", features = ["full"]}
+once_cell = "1.18"
+lis2dw12-sensor = {git = "ssh://git@github.com/prasad-anuruddhika/lis2dw12-sensor-rs.git", version = "0.1.1"}
+veml7700 = "0.1.7"
+chrono = "0.4"
+
+[build-dependencies]
+cc = "1.0"
